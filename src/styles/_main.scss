@@ -1,0 +1,175 @@
+@import "mixins";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'TT Firs Neue', 'Inter', sans-serif;
+  line-height: 1;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none; /* Chrome and Safari */
+  }
+}
+
+li {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  outline: none;
+  border: none;
+  background: var(--gray);
+  border-radius: 8px;
+  padding: 8px 36px;
+  max-width: 100%;
+  width: 100%;
+
+  &:placeholder-shown {
+    color: var(--text-gray);
+  }
+}
+
+
+.container {
+  max-width: 400px;
+  width: 100%;
+  padding-inline: 16px;
+  margin-inline: auto;
+}
+
+.active {
+
+  h4 {
+    font-weight: 500;
+    color: var(--black);
+  }
+
+  span {
+    svg {
+      fill: var(--black);
+    }
+  }
+}
+
+button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.title {
+  margin-bottom: 12px;
+  margin-top: 32px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--black);
+}
+
+.btn {
+  font-family: 'TT Firs Neue';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+
+
+  &__white {
+    @include flex(center, center);
+    color: var(--black);
+    border-radius: 8px;
+    background-color: var(--white);
+    padding: 10px 16px;
+  }
+
+  &__black {
+    color: var(--white);
+    border-radius: 8px;
+    background-color: var(--black);
+    padding: 6px 30px;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.mySwiper {
+  margin-top: 12px;
+  border: 1px solid #6792F4;
+  border-radius: 10px;
+  padding-block: 24px;
+  position: relative;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: -24px !important;
+  z-index: 12334;
+}
+
+.fixed_margin {
+  height: 128px;
+}
+
+.fixed_height-60 {
+  height: 64px;
+}
+
+.mt-16 {
+  margin-top: 16px;
+}
+

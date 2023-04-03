@@ -1,0 +1,61 @@
+@import "src/styles/mixins";
+
+// =--------------- CARD STYLES ---------------=
+.bags_card {
+  @include flex-start(center);
+  gap: 8px;
+  border: 1px solid #EEEEEE;
+  border-radius: 10px;
+  padding: 12px 12px 12px 13px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.card_img {
+  @include flex-center(center);
+  @include rectangle(88);
+  border: 1px solid #EEEEEE;
+  border-radius: 10px;
+}
+
+.card_options {
+  width: 100%;
+  h3 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: capitalize;
+  }
+
+  div {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: #3C4BDC;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 16px;
+    text-transform: capitalize;
+    color: #BDBDBD;
+  }
+
+}
+
+.like_icon {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  cursor: pointer;
+}
+
+.counter {
+  margin-left: auto;
+  color: var(--black);
+  width: 100%;
+  @include flex-end(center);
+}

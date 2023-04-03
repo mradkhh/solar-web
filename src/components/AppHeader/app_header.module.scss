@@ -1,0 +1,35 @@
+
+.home__root {
+  text-align: left;
+  margin-bottom: 22px;
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 123;
+  background-color: var(--white);
+  padding-block: 16px;
+  padding-inline: 16px;
+
+  h1 {
+    font-family: 'Roboto';
+  }
+}
+
+
+.root {
+  text-align: center;
+  position: fixed;
+  inset: 0 0 auto 0;
+  background-color: var(--white);
+  padding-block: 12px;
+  z-index: 123;
+
+  h1 {
+    font-family: 'TT Firs Neue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: capitalize;
+  }
+}

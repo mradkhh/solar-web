@@ -1,0 +1,21 @@
+
+.search__root {
+    position: relative;
+
+  span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 12px;
+  }
+
+  input {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    text-transform: capitalize;
+    color: var(--black);
+  }
+}

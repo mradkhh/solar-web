@@ -1,0 +1,45 @@
+@import "src/styles/mixins";
+// =-------------- ALERT -----------------=
+
+.empty__page_alert {
+  width: 100%;
+  height: calc(100vh - 148px);
+  @include flex-center(center);
+  text-align: center;
+
+
+  h2 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 28px;
+    text-transform: capitalize;
+    color: var(--black);
+    margin-bottom: 4px;
+  }
+
+  p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    text-transform: capitalize;
+    color: #BDBDBD;
+    margin-bottom: 16px;
+    padding-inline: 16px;
+  }
+
+  button {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 28px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    padding: 11px 64px;
+    margin-inline: auto;
+  }
+}

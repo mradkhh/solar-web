@@ -35,7 +35,7 @@ a {
   text-decoration: none;
 }
 
-input {
+input, select {
   outline: none;
   border: none;
   background: var(--gray);
@@ -99,16 +99,18 @@ button {
   &__white {
     @include flex(center, center);
     color: var(--black);
-    border-radius: 8px;
-    background-color: var(--white);
+    background-color: transparent;
     padding: 10px 16px;
+    border: 1px solid #EEEEEE;
+    border-radius: 4px;
   }
 
   &__black {
     color: var(--white);
-    border-radius: 8px;
+    border-radius: 4px;
     background-color: var(--black);
     padding: 6px 30px;
+    border: 1px solid transparent;
   }
 }
 
@@ -169,7 +171,62 @@ button {
   height: 64px;
 }
 
+.fixed_height-40 {
+  height: 40px;
+}
+
 .mt-16 {
   margin-top: 16px;
 }
 
+
+.header_drop_down {
+  @include flex-center(space-between);
+  cursor: pointer;
+
+  &:hover {
+    .svg {
+      stroke: #4C5EFE;
+    }
+  }
+
+  b {
+    @include flex-center(center);
+    transition: all ease 0.3s;
+    margin-left: 4px;
+
+    .svg {
+      stroke: #2A2941;
+    }
+  }
+
+  &.active {
+    b {
+
+      transform: rotate(180deg);
+      transition: all ease 0.3s;
+    }
+
+
+    .svg {
+      transition: all ease 0.3s;
+      stroke: #4C5EFE;
+    }
+  }
+
+}
+
+.developed {
+  position: fixed;
+  inset: auto 16px 110px 16px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+
+  span {
+    font-weight: bold;
+  }
+}

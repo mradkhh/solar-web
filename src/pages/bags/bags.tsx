@@ -4,6 +4,7 @@ import RootLayout from "../../layout/rootLayout";
 import AppHeader from "../../components/AppHeader/appHeader";
 import EmptyPageAlert from "../../components/emptyPageAlert";
 import BagsCard from "./components/bags_card";
+import TotalPrice from "./components/totalPrice";
 
 
 const Bags:FC = () => {
@@ -55,6 +56,8 @@ const Bags:FC = () => {
                         price={'12 250 650 '}
                         exist={false}
                     />
+                <TotalPrice price={'7320'}/>
+                <div className="fixed_margin"></div>
                 <div className="fixed_margin"></div>
                 </>
                 : <EmptyPageAlert

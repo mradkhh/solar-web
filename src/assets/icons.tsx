@@ -110,6 +110,74 @@ const DeleteIcon = () => {
     )
 }
 
+const ChevronDown = () => {
+
+    return (
+        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.867 9.4502L12.5805 15.8802L6.29297 9.4502" stroke="#020105" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    )
+}
+
+const ArrowRightIcon = () => {
+
+    return (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.5 5L15.5 12L8.5 19" stroke="#200E32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    )
+}
+
+const ShopingBagIcon = () => {
+
+    return (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.53872 10.667V5.12897C9.53872 3.76997 10.6407 2.66797 11.9997 2.66797C13.3587 2.66797 14.4607 3.76997 14.4607 5.12897V10.666M16.5027 19.999H7.49672C5.65772 19.999 4.25172 18.36 4.53172 16.543L5.84572 8.00197H18.1537L19.4677 16.543C19.7477 18.36 18.3417 19.999 16.5027 19.999Z" stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    )
+}
+
+const UserIcon = () => {
+
+    return (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.33301 19.8412V15.3342C5.33301 14.2292 6.22801 13.3342 7.33301 13.3342H16.666C17.771 13.3342 18.666 14.2292 18.666 15.3342V19.8412M14.9634 7.12316C14.9634 8.75958 13.6368 10.0862 12.0004 10.0862C10.364 10.0862 9.03738 8.75958 9.03738 7.12316C9.03738 5.48674 10.364 4.16016 12.0004 4.16016C13.6368 4.16016 14.9634 5.48674 14.9634 7.12316Z" stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+    )
+}
+
+const GlobeIcon = () => {
+
+    return (
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.998 12.2285C19.998 16.6456 16.4171 20.2265 12 20.2265M19.998 12.2285C19.998 7.8113 16.4171 4.23047 12 4.23047M19.998 12.2285H4.00195M12 20.2265C7.58278 20.2265 4.00195 16.6456 4.00195 12.2285M12 20.2265C13.7943 20.2265 15.249 16.6456 15.249 12.2285C15.249 7.8113 13.7943 4.23047 12 4.23047M12 20.2265C10.2056 20.2265 8.75095 16.6456 8.75095 12.2285C8.75095 7.8113 10.2056 4.23047 12 4.23047M4.00195 12.2285C4.00195 7.8113 7.58278 4.23047 12 4.23047" stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+    )
+}
+
+const LogOutIcon = () => {
+
+    return (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.8125 12.0225H3.77148" stroke="#FF0027" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12.8848 9.10645L15.8128 12.0224L12.8848 14.9384" stroke="#FF0027" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8.50391 7.38946V6.45646C8.50391 4.42146 10.1529 2.77246 12.1889 2.77246H17.0729C19.1029 2.77246 20.7479 4.41746 20.7479 6.44746V17.5875C20.7479 19.6225 19.0979 21.2725 17.0629 21.2725H12.1779C10.1489 21.2725 8.50391 19.6265 8.50391 17.5975V16.6555" stroke="#FF0027" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    )
+}
+
+const XIcon = () => {
+
+    return (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.66699 6.64648L17.333 17.3105M6.66699 17.3105L17.333 6.64648" stroke="black" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    )
+}
+
+
 export {
     HomeIcon,
     CategoryIcon,
@@ -121,5 +189,12 @@ export {
     DislikeIcon,
     AddToCart,
     Bag2Icon,
-    DeleteIcon
+    DeleteIcon,
+    ChevronDown,
+    ArrowRightIcon,
+    ShopingBagIcon,
+    GlobeIcon,
+    LogOutIcon,
+    UserIcon,
+    XIcon
 }

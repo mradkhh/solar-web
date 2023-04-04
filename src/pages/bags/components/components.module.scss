@@ -59,3 +59,43 @@
   width: 100%;
   @include flex-end(center);
 }
+
+
+.total__price {
+  border: 1px solid #BDBDBD;
+  border-radius: 10px;
+  padding: 10px 24px;
+  position: fixed;
+  inset: auto 16px 110px 16px;
+  z-index: 12;
+  background-color: var(--white);
+
+
+  div {
+    margin-bottom: 14px;
+    @include flex-between(center);
+
+    h5 {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 28px;
+    }
+
+    h6 {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 28px;
+    }
+  }
+
+  button {
+    width: 100%;
+    padding-block: 10px;
+  }
+
+
+}

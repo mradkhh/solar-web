@@ -9,10 +9,12 @@ type Props = {
 const SearchInput:FC<Props> = ({ text }) => {
   return (
     <div className={styles.search__root}>
-        <span>
-            <SearchIcon/>
-        </span>
-        <input className={'input input__search'} type="text" placeholder={"Mahsulot va toifalarni qidirsh"}/>
+        <div className={styles.input__wrapper}>
+            <span>
+             <SearchIcon/>
+            </span>
+            <input className={'input input__search'} type="text" placeholder={"Mahsulot va toifalarni qidirsh"}/>
+        </div>
     </div>
   );
 };

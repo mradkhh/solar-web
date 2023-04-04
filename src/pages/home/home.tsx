@@ -1,4 +1,4 @@
-import {FC} from "react";
+import React, {FC} from "react";
 import RootLayout from "../../layout/rootLayout";
 import SearchInput from "../../components/inputs/SearchInput";
 import AppHeader from "../../components/AppHeader/appHeader";
@@ -11,6 +11,7 @@ const Home: FC = () => {
         <RootLayout>
             <AppHeader type={'home'} text={'BigTech'}/>
             <SearchInput text={'text'}/>
+            <div className="fixed_height-40"></div>
             <h2 className={"title"}>Top Tovarlar</h2>
             <div className={'grid'}>
                 <ProductCard name={'iphone 14 pro max'} price={'12 250 650'}/>

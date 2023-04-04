@@ -5,7 +5,7 @@ type Props = {
   text: string;
 };
 
-const co:FC<Props> = ({ text }) => {
+const Orders:FC<Props> = ({ text }) => {
   return (
     <div className={styles.root}>
       <h1>{text}</h1>
@@ -13,4 +13,4 @@ const co:FC<Props> = ({ text }) => {
   );
 };
 
-export default co;
+export default Orders;

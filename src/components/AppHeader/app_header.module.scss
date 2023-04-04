@@ -1,3 +1,4 @@
+@import "src/styles/mixins";
 
 .home__root {
   text-align: left;
@@ -11,6 +12,26 @@
 
   h1 {
     font-family: 'Roboto';
+  }
+}
+
+.more {
+  text-align: left !important;
+  @include flex-between(center);
+  
+  span {
+    cursor: pointer;
+  }
+
+  h6 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    text-transform: capitalize;
+    color: #0029FF;
+    cursor: pointer;
   }
 }
 

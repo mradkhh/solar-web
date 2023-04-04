@@ -7,13 +7,15 @@ type Props = {
 
 const TotalPrice:FC<Props> = ({ price }) => {
   return (
-    <div className={styles.total__price}>
-      <div>
-          <h5>Umumiy narx</h5>
-          <h6>${price}</h6>
+      <div className={styles.total__price_wrapper}>
+          <div className={styles.total__price}>
+              <div>
+                  <h5>Umumiy narx</h5>
+                  <h6>${price}</h6>
+              </div>
+              <button className="btn btn__black">Sotib olish</button>
+          </div>
       </div>
-        <button className="btn btn__black">Sotib olish</button>
-    </div>
   );
 };
 

@@ -5,15 +5,23 @@ import {ArrowRightIcon} from "../../../assets/icons";
 type Props = {
   text: string;
   icon: JSX.Element;
-  type?: 'exit';
-  setState: (bool: boolean) => void
+  type?: string;
+  setState?: (bool: boolean) => void
 };
 
 const OptionsItem:FC<Props> = ({ text, icon, type, setState }) => {
 
     const handleClick = () => {
-        setState(true)
+        if (setState) {
+            setState(true)
+        }
+
+        if (type === 'orders') {
+            window.location.href = '/orders'
+        }
     }
+
+
   return (
     <div onClick={handleClick} className={styles.options__item}>
       <div>

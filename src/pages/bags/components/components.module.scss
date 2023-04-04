@@ -60,15 +60,19 @@
   @include flex-end(center);
 }
 
+.total__price_wrapper {
+  position: fixed;
+  inset: auto 16px 110px 16px;
+  z-index: 12;
+}
 
 .total__price {
   border: 1px solid #BDBDBD;
   border-radius: 10px;
   padding: 10px 24px;
-  position: fixed;
-  inset: auto 16px 110px 16px;
-  z-index: 12;
   background-color: var(--white);
+  @include maxWidth(410);
+  margin-inline: auto;
 
 
   div {

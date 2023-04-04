@@ -17,7 +17,7 @@ const Profile:FC = () => {
     <RootLayout>
         <AppHeader type={'bags'} text={'Profil'}/>
         <ProfileHead name={'Adkhambek'} number={'+998910039937'} fullname={'Adkhambek Yusupov'}/>
-        <OptionsItem setState={setShowProfileEdit} text={'buyurtmalarim'} icon={<ShopingBagIcon/>}/>
+        <OptionsItem type={'orders'} text={'buyurtmalarim'} icon={<ShopingBagIcon/>}/>
         <OptionsItem setState={setShowProfileEdit} text={'Profil'} icon={<UserIcon/>}/>
         <OptionsItem setState={setShowProfileEdit} text={'Ilova tili'} icon={<GlobeIcon/>}/>
         <OptionsItem setState={setShowModal} type={'exit'} text={'chiqish'} icon={<LogOutIcon/>}/>

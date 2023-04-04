@@ -15,13 +15,15 @@ const ProfileEdit:FC<Props> = ({ setState }) => {
     }
 
   return (
-    <div className={styles.profile__edit}>
-        <form className={styles.form}>
-            <TextInput name={'first_name'} label={'ism'} placeholder={'Ism'}/>
-            <TextInput name={'last_name'} label={'familiya (ixtiyoriy)'} placeholder={'Familiya'}/>
-            <TextInput name={'number'} label={'telefon raqam'} placeholder={'Telefon raqam'}/>
-            <button onClick={handleClick} className={'btn btn__black'}>Saqlash</button>
-        </form>
+    <div className={styles.profile__edit_wrapper}>
+        <div className={styles.profile__edit}>
+            <form className={styles.form}>
+                <TextInput name={'first_name'} label={'ism'} placeholder={'Ism'}/>
+                <TextInput name={'last_name'} label={'familiya (ixtiyoriy)'} placeholder={'Familiya'}/>
+                <TextInput name={'number'} label={'telefon raqam'} placeholder={'Telefon raqam'}/>
+                <button onClick={handleClick} className={'btn btn__black'}>Saqlash</button>
+            </form>
+        </div>
     </div>
   );
 };

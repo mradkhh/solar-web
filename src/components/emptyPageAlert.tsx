@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import styles from './components.module.scss';
+import {Link} from "react-router-dom";
 
 type Props = {
   title: string;
@@ -12,7 +13,7 @@ const EmptyPageAlert:FC<Props> = ({ text, title }) => {
       <div>
         <h2>{title}</h2>
         <p>{text}</p>
-        <button className="btn btn__black">bosh sahifa</button>
+        <Link to={'/'} className="btn btn__to-home">bosh sahifa</Link>
       </div>
     </div>
   );

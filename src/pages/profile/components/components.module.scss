@@ -123,11 +123,15 @@
 
 
 // =------------PROFILE EDIT ----------------=
-.profile__edit {
+.profile__edit_wrapper {
   position: fixed;
   inset: 60px 16px auto 16px;
   background-color: var(--white);
   z-index: 19;
+}
+.profile__edit {
+  @include maxWidth(410);
+  margin-inline: auto;
 }
 
 .form {

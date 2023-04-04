@@ -177,6 +177,24 @@ const XIcon = () => {
     )
 }
 
+const ArrowLeftIcon = () => {
+    return (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.0685 17.7131L5.35547 12.0001L11.0685 6.28711M18.6695 12.0001H5.37247" stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    )
+}
+
+const ArrowLeftBlueIcon = () => {
+
+    return (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.25 12.2744L19.25 12.2744" stroke="#3C4BDC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10.2988 18.299L4.24883 12.275L10.2988 6.25" stroke="#3C4BDC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    )
+}
+
 
 export {
     HomeIcon,
@@ -196,5 +214,7 @@ export {
     GlobeIcon,
     LogOutIcon,
     UserIcon,
-    XIcon
+    XIcon,
+    ArrowLeftIcon,
+    ArrowLeftBlueIcon
 }

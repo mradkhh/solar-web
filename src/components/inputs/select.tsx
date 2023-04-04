@@ -11,12 +11,12 @@ interface CustomSelectProps {
     options: Option[]
     initialPositon: string
     setState: (state: any) => any
+    label?: string
 }
 
-const CustomSelect: FC<CustomSelectProps> = ({ options, initialPositon, setState }) => {
+const CustomSelect: FC<CustomSelectProps> = ({ options, initialPositon, setState, label }) => {
     const optionsRef = createRef<HTMLDivElement>()
     const [ showOptions, setShowOptions ] = useState<boolean>(false)
-    // const [ optionId, setOptionId ] = useState<string>(initialPositon)
     const [ optionName, setOptionName ] = useState<string>(initialPositon)
 
     function useOutsideAlerter(ref: any) {
@@ -53,6 +53,11 @@ const CustomSelect: FC<CustomSelectProps> = ({ options, initialPositon, setState
 
     return (
         <div className={styles.wrapper}>
+            {
+                label
+                    ? <label className={styles.label} htmlFor={label}>{label}</label>
+                    : null
+            }
             <div
                 onClick={onFocus}
                 className={styles.select + ' header_drop_down'}>{optionName}

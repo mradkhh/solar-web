@@ -1,9 +1,25 @@
+@import "src/styles/mixins";
 
-
-.search__root {
+.search__wrapper {
   position: fixed;
   inset: 68px 16px auto 16px;
   z-index: 12;
+}
+
+.search__root {
+  @include maxWidth(410);
+  background-color: var(--white);
+  margin-inline: auto;
+}
+
+.label {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #727474;
+  margin-bottom: 6px;
 }
 
 .input__wrapper {
@@ -32,6 +48,7 @@
 .wrapper {
   position: relative;
   width: 100%;
+  margin-bottom: 16px;
 }
 
 .select {
@@ -62,6 +79,7 @@
   background: #F9F9F9;
   border-radius: 8px;
   padding-top: 24px;
+  z-index: 12;
 
   > span {
     display: block;

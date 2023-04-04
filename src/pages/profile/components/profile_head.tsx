@@ -11,7 +11,7 @@ const ProfileHead:FC<Props> = ({ name, number, fullname }) => {
   return (
     <div className={styles.head__root}>
       <div className={styles.head__img}>
-          <img src="/avatar.png" alt="avatar"/>
+          <img src="/avatar.jpg" alt="avatar"/>
       </div>
         <div className={styles.head__info}>
             <h4>{name}</h4>

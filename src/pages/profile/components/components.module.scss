@@ -12,6 +12,12 @@
   border: 1px solid #EEEEEE;
   border-radius: 10px;
   overflow: hidden;
+
+  img {
+    object-fit: contain;
+    width: 80px;
+    height: 80px;
+  }
 }
 
 .head__info {
@@ -54,7 +60,7 @@
   @include flex-between(center);
   border: 1px solid #EEEEEE;
   border-radius: 10px;
-  padding: 12px 0px 12px 4px;
+  padding: 12px 0 12px 4px;
   margin-bottom: 12px;
   cursor: pointer;
 
@@ -112,5 +118,28 @@
     @include flex-end(center);
     width: 100%;
     cursor: pointer ;
+  }
+}
+
+
+// =------------PROFILE EDIT ----------------=
+.profile__edit {
+  position: fixed;
+  inset: 60px 16px auto 16px;
+  background-color: var(--white);
+  z-index: 19;
+}
+
+.form {
+  padding-bottom: 300px;
+  button {
+    width: 100%;
+    margin-top: 36px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    color: #FFFFFF;
   }
 }

@@ -1,5 +1,5 @@
-import React, {FC, ReactNode} from 'react';
-import styles from './modal.module.scss';
+import {FC, ReactNode} from 'react';
+import styles from "./modal.module.scss";
 
 type Props = {
     children: ReactNode,

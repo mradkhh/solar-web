@@ -95,3 +95,23 @@
     opacity: 1;
   }
 }
+
+
+// =---------- TEXT INPUT ---------------=
+.textinput_root {
+  margin-bottom: 16px;
+
+  label {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: #99999B;
+  }
+
+  input {
+    padding: 14px;
+  }
+}

@@ -1,20 +1,18 @@
 import { FC } from 'react';
-import {ArrowRightIcon} from "../../../assets/icons";
 import styles from './components.module.scss';
+import {ArrowRightIcon} from "../../../assets/icons";
 
 type Props = {
   text: string;
   icon: JSX.Element;
   type?: 'exit';
-  setState?: (bool: boolean) => void
+  setState: (bool: boolean) => void
 };
 
 const OptionsItem:FC<Props> = ({ text, icon, type, setState }) => {
 
     const handleClick = () => {
-        if (setState) {
-            type === 'exit' ? setState(true) : null
-        }
+        setState(true)
     }
   return (
     <div onClick={handleClick} className={styles.options__item}>

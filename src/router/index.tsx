@@ -3,6 +3,11 @@ import Sign from "../pages/sign/sign";
 import Orders from "../pages/orders/orders";
 import Countries from "../pages/countries/countries";
 import Filter from "../pages/filter/filter";
+import Login from "../pages/login/login";
+import Registration from "../pages/registration/registration";
+import Confirm from "../pages/registration/confirm";
+import CreateAccount from "../pages/registration/create_account";
+import Search from "../pages/search/search";
 
 
 export const publicRoutes = [
@@ -17,6 +22,11 @@ export const publicRoutes = [
     { path: '/orders', component: <Orders/> },
     { path: '/countries', component: <Countries/> },
     { path: '/filter', component: <Filter/> },
+    { path: '/login', component: <Login/> },
+    { path: '/registration', component: <Registration/> },
+    { path: '/registration/confirm', component: <Confirm/> },
+    { path: '/create-account', component: <CreateAccount/> },
+    { path: '/search', component: <Search/> }
 ]
 
 export const privateRoutes = [

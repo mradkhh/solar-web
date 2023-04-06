@@ -2,6 +2,8 @@ import { FC } from 'react';
 import RootLayout from "../../layout/rootLayout";
 import MySwiper from "../../components/Swiper/mySwiper";
 import ProductSettings from "./components/productSettings";
+import {useFetch} from "../../services";
+import {Category} from "../../models";
 
 
 const img_url = [ '/iman.png',  '/iman.png',  '/iman.png',  '/iman.png',  '/iman.png',  '/iman.png',  '/iman.png']
@@ -26,6 +28,9 @@ const product__info = [
 const colors = ['#DAC8AF', '#000000', '#D540F3', '#F1F3F2']
 
 const Product:FC = () => {
+
+    const { data: users, isLoading, error, fetchData } = useFetch<Category[]>('/product');
+
   return (
     <RootLayout>
         <div className={'mySwiper'}>

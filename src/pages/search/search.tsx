@@ -1,15 +1,28 @@
-import { FC } from 'react';
-import styles from './styles/Search.module.scss';
+import React, { FC } from 'react';
+import RootLayout from "../../layout/rootLayout";
+import Search_input from "../../components/inputs/search_input";
+import {FilterIcon} from "../../assets/icons";
+import ProductCard from "../../components/cards/productCard";
+import styles from './search.module.scss';
 
-type Props = {
-  text: string;
-};
 
-const Search:FC<Props> = ({ text }) => {
+const Search:FC = () => {
   return (
-    <div className={styles.root}>
-      <h1>{text}</h1>
-    </div>
+    <RootLayout>
+        <div className={styles.search__wrapper}>
+            <Search_input type={'search'} text={'Qidiruv'}/>
+        </div>
+        <div className={'grid'}>
+            <ProductCard name={'iphone 14 pro max'} price={'12 250 650'}/>
+            <ProductCard name={'samsung led monitor'} price={'12 250 650'}/>
+            <ProductCard name={'iphone 14 pro max'} price={'12 250 650'}/>
+            <ProductCard name={'iphone 14 pro max'} price={'12 250 650'}/>
+            <ProductCard name={'iphone 14 pro max'} price={'12 250 650'}/>
+        </div>
+
+        <div className="fixed_height-60"></div>
+        <div className="fixed_height-60"></div>
+    </RootLayout>
   );
 };
 

@@ -88,6 +88,7 @@ button {
   color: var(--black);
 }
 
+
 .btn {
   font-family: 'TT Firs Neue';
   font-style: normal;
@@ -129,6 +130,13 @@ button {
     color: var(--white);
     text-transform: capitalize;
   }
+}
+
+.not_header {
+  inset: 0 16px auto 16px !important;
+  padding-bottom: 12px;
+  padding-top: 20px;
+  background-color: var(--white);
 }
 
 .grid {

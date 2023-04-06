@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import RootLayout from "../../layout/rootLayout";
 import AppHeader from "../../components/AppHeader/appHeader";
-import SearchInput from "../../components/inputs/SearchInput";
+import Search_input from "../../components/inputs/search_input";
 import EmptyPageAlert from "../../components/emptyPageAlert";
 import FavouritesCard from "./components/favourites_card";
 

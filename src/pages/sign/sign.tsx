@@ -25,7 +25,7 @@ const Sign:FC= () => {
         <CustomSelect options={options} initialPositon={'UZ'} setState={setState}/>
         <div className={styles.buttons}>
             <Link to={'/login'} className="btn btn__black link__btn">Kirish</Link>
-            <Link  to={'/registration'} className="btn btn__white">Ro’yhatdan o’tish</Link>
+            <Link  to={'/register'} className="btn btn__white">Ro’yhatdan o’tish</Link>
         </div>
 
         <h5 className="developed">Developed by <span>ONVETI</span></h5>

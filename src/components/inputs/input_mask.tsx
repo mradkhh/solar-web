@@ -1,4 +1,4 @@
-import React, {FC} from "react";
+import React, {FC, useState} from "react";
 import InputMask from "react-input-mask";
 import styles from './styles/inputs.module.scss'
 
@@ -7,25 +7,24 @@ type Props = {
     name: string;
     placeholder: string;
     value: string;
-    setValue: (str: string) => void
+    handleChange: any
 }
 
-const PhoneInput:FC<Props> = ({ label, name, placeholder, setValue, value }) => {
+const PhoneInput:FC<Props> = ({ label, name, placeholder, value, handleChange }) => {
 
-    function handleNumberChange(event: React.ChangeEvent<HTMLInputElement>) {
-        setValue(event.target.value);
-    }
+    const [ state, setState ] = useState(value)
 
     return (
         <div className={styles.mask_wrapper}>
             <label htmlFor={name}>{label}</label>
             <InputMask
+                name={"phoneNumber"}
                 mask="+\9\98 (\99) 999 99 99"
                 maskChar=" "
                 placeholder={placeholder}
                 type="tel"
                 value={value}
-                onChange={handleNumberChange}
+                onChange={handleChange}
             />
         </div>
     );

@@ -1,35 +1,33 @@
-import React, {FC, useState} from "react";
-import styles from './styles/inputs.module.scss'
+import React, {ChangeEvent, FC, useState} from "react";
 import {EyeIcon, EyeOfIcon} from "../../assets/icons";
+import styles from './styles/inputs.module.scss'
 
 type Props = {
     name: string;
     label: string;
-    placeholder: string
+    placeholder: string;
+    value: string;
+    handleChange:  (event: ChangeEvent<HTMLInputElement>) => void;
 }
 
 
-const PasswordInput: FC<Props> = ({ name, label, placeholder }) => {
-    const [password, setPassword] = useState("");
+const PasswordInput: FC<Props> = ({ name, label, placeholder, value, handleChange }) => {
     const [showPassword, setShowPassword] = useState<boolean>(false);
 
     const handleTogglePassword = () => {
         setShowPassword(!showPassword);
     };
 
-    const handleChangePassword = (event: any) => {
-        setPassword(event.target.value);
-    };
-
     return (
         <div className={styles.textinput_root}>
             <label htmlFor="password">Password</label>
             <input
-                id="password"
+                name={name}
+                id={name}
                 type={showPassword ? "text" : "password"}
-                value={password}
+                value={value}
                 placeholder={placeholder}
-                onChange={handleChangePassword}
+                onChange={handleChange}
             />
            <span className={styles.eye_icon} onClick={handleTogglePassword}>
                { showPassword ? <EyeOfIcon/> : <EyeIcon/> }

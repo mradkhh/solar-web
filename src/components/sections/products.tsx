@@ -2,10 +2,15 @@ import { FC } from 'react';
 import Title from "../UI/title/title";
 import ProductCard from "../UI/cards/product_card";
 import styles from './styles/products.module.scss';
+import {useFetch} from "../../services";
 
 
 
 const Products:FC = () => {
+
+    const { data, fetchData, isLoading, error } = useFetch('/products', 'get')
+
+    console.log(data)
   return (
     <div className={styles.root}>
       <div className={styles.content + ' container'}>
@@ -16,11 +21,11 @@ const Products:FC = () => {
               <div className="badge">Аккумляторная батарея</div>
           </div>
           <div className={styles.products_grid}>
-              <ProductCard name={'Hi MO 5 LR5-72HBD'}/>
-              <ProductCard name={'Hi MO 5 LR5-72HBD'}/>
-              <ProductCard name={'Hi MO 5 LR5-72HBD'}/>
-              <ProductCard name={'Hi MO 5 LR5-72HBD'}/>
-              <ProductCard name={'Hi MO 5 LR5-72HBD'}/>
+              {
+                  data?.map((item: any) =>
+                      <ProductCard image={item?.image_1} name={item?.name}/>
+                  )
+              }
           </div>
       </div>
     </div>

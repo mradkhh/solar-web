@@ -59,3 +59,10 @@
   height: $width-height+px;
   min-height: $width-height+px;
 }
+
+// =--------------------- grid --------------------=
+@mixin grid($repeat, $gap) {
+  display: grid;
+  grid-template-columns: repeat($repeat, 1fr);
+  gap: $gap + px;
+}

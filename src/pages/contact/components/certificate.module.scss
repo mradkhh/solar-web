@@ -1,0 +1,39 @@
+@import "src/styles/mixins";
+
+.root {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: #EEF0F3;
+  position: relative;
+  overflow: hidden;
+
+  > span {
+    position: absolute;
+    right: -140px;
+    bottom: 0;
+  }
+}
+
+.content {
+
+  > div {
+
+    @include flex-between(flex-start);
+
+    p {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 140%;
+      color: #2D2C2E;
+      @include maxWidth(550);
+    }
+  }
+}
+
+.right {
+  z-index: 12;
+  div {
+    @include flex-end(center);
+    gap: 20px;
+  }
+}

@@ -1,0 +1,11 @@
+@import "src/styles/mixins";
+
+.root {
+  //background-image: url('src/assets/images/work.png');
+  background: linear-gradient(100.38deg, #3F689C 2.83%, #17365E 75.2%);
+  padding-block: 50px;
+}
+
+.content {
+  @include flex-between(center);
+}

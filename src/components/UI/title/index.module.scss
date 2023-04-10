@@ -1,0 +1,21 @@
+@import "src/styles/mixins";
+
+.root {
+  @include flex-start(center);
+  margin-bottom: 40px;
+  gap: 20px;
+
+  h2 {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 140%;
+  }
+}
+
+.white {
+  color: #ffffff;
+}
+
+.black {
+  color: #1E1E1E;
+}

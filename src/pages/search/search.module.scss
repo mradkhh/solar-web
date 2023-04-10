@@ -1,7 +1,0 @@
-@import "src/styles/mixins";
-
-
-.search__wrapper {
-  @include flex-between(center);
-  margin-bottom: 20px;
-}

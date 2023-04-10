@@ -1,0 +1,38 @@
+@import "src/styles/mixins";
+
+.root_wrapper {
+  background-color: #fff;
+}
+
+
+.root {
+  padding-block: 15px;
+  @include flex-between(center);
+}
+
+.right {
+  @include flex-end(center);
+  gap: 35px;
+}
+
+.navbar {
+  ul {
+    @include flex-end(center);
+    gap: 40px;
+
+    li {
+
+      a {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 120%;
+        color: #1E1E1E;
+      }
+    }
+  }
+}
+
+.langs {
+  @include flex-end(center);
+  gap: 10px;
+}

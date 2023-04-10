@@ -1,0 +1,17 @@
+@import "src/styles/mixins";
+
+.root {
+  background-color: #EEF0F3;
+  padding-block: 50px;
+}
+
+.badges {
+  @include flex-start(center);
+  gap: 20px;
+  padding-bottom: 30px;
+}
+
+
+.products_grid {
+  @include grid(3, 40);
+}

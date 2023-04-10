@@ -22,7 +22,7 @@ export const useFetch = <T>(url: string, method: 'get' | 'post' = 'get', data?: 
 
         requestPromise
             .then(response => {
-                setResponseData(response.data);
+                setResponseData(response.data?.results);
             })
             .catch(error => {
                 setError(error);
@@ -38,3 +38,4 @@ export const useFetch = <T>(url: string, method: 'get' | 'post' = 'get', data?: 
 
     return { data: responseData, isLoading, error, fetchData };
 };
+

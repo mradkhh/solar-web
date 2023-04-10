@@ -1,0 +1,131 @@
+@import "src/styles/mixins";
+
+.root {
+  @include flex-center(flex-start);
+}
+
+.map {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  max-height: 100%;
+  img {
+    max-width: 1000px;
+    height: 676px;
+    max-height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.form {
+  background-image: url('public/contact.png');
+  background-color: #1F262D;
+  min-width: 760px;
+  max-width: 920px;
+  width: 100%;
+  padding: 50px 60px 120px;
+
+  > h3 {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 115%;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+  }
+
+  > p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+  }
+
+  form {
+    width: 100%;
+    @include flex-start(flex-start);
+    flex-direction: column;
+
+    label {
+      width: 100%;
+      margin-bottom: 32px;
+    }
+
+    textarea {
+      margin-top: 20px;
+    }
+
+    button {
+      @include flex-center(center);
+      gap: 10px;
+      background-color: transparent;
+      color: #fff;
+      margin-bottom: 40px;
+
+      svg {
+        path {
+          fill: #fff;
+        }
+      }
+
+      &:hover {
+        color: #FFE600;
+        svg {
+          path {
+            fill: #FFE600;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.info {
+
+  > div {
+
+
+    span {
+      @include rectangle(40);
+      background: #FCD318;
+      border-radius: 5px;
+      @include flex(center, center);
+      padding-top: 6px;
+    }
+  }
+}
+
+.info_top {
+  @include flex-start(center);
+  gap: 50px;
+  margin-bottom: 30px;
+}
+
+.info_item {
+  @include flex-start(center);
+  gap: 12px;
+  div {
+
+    h6 {
+      display: block;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 120%;
+      letter-spacing: 0.01em;
+      color: #FFFFFF;
+    }
+
+  }
+    p {
+      display: block;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 120%;
+      letter-spacing: 0.01em;
+      color: #FFFFFF;
+    }
+}

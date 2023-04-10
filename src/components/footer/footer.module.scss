@@ -1,0 +1,80 @@
+@import "src/styles/mixins";
+
+
+.root {
+  background-color: #1F262D;
+  padding-top: 40px;
+}
+
+.content {
+  @include flex-start(flex-start);
+  gap: 160px;
+  padding-bottom: 70px;
+}
+
+.footer_items {
+  @include flex-between(flex-start);
+  gap: 160px;
+
+  h5 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+  }
+
+  a {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    color: #CCCCCC;
+
+    &:hover {
+      color: #FCD318;
+    }
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
+}
+
+.contact {
+
+  li {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    color: #CCCCCC;
+  }
+}
+
+.social {
+  margin-top: 20px;
+  ul {
+    @include flex-start(center);
+    gap: 20px;
+  }
+}
+.bottom {
+  border-top: 1px solid #CCCCCC;
+  padding-block: 16px;
+  @include flex-between(center);
+
+
+  h6, div {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+
+    span {
+      text-decoration: underline;
+    }
+  }
+}

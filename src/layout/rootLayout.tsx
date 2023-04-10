@@ -1,6 +1,7 @@
 import styles from './styles/layout.module.scss'
-import AppBar from "../components/AppBar/AppBar";
 import React, {FC} from "react";
+import Header from "../components/header/header";
+import Footer from "../components/footer/footer";
 
 interface IRootLayout {
     children: React.ReactNode
@@ -8,15 +9,11 @@ interface IRootLayout {
 
 const RootLayout: FC<IRootLayout> = ({ children }) => {
 
-
-
     return (
-        <main className={styles.root + ' container'}>
-            <div className="fixed_height-60"></div>
-            {
-                children
-            }
-            <AppBar/>
+        <main className={styles.root}>
+             <Header/>
+                 {children}
+            <Footer/>
         </main>
     )
 }

@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  font-family: 'TT Firs Neue', 'Inter', sans-serif;
+  font-family: 'Gilroy', 'Poppins', sans-serif;
   line-height: 1;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
@@ -35,40 +35,55 @@ a {
   text-decoration: none;
 }
 
-input, select {
-  outline: none;
+input, textarea {
+  background-color: transparent;
   border: none;
-  background: var(--gray);
-  border-radius: 8px;
-  padding: 8px 36px;
-  max-width: 100%;
-  width: 100%;
+  border-bottom: 1px solid #ffffff;
+  padding-block: 4px;
+  outline: none;
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+  @include maxWidth(450);
 
   &:placeholder-shown {
-    color: var(--text-gray);
+    color: #CCCCCC;
+  }
+
+  &:focus {
+    color: #FFE600;
+    border-bottom: 1px solid #FFE600;
   }
 }
 
 
 .container {
-  max-width: 400px;
-  width: 100%;
-  padding-inline: 16px;
-  margin-inline: auto;
+  max-width: 1410px;
+  margin: 0 auto;
+  padding-inline: 20px;
+  box-sizing: border-box;
+
+  @media (max-width: 767px) {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    max-width: 750px;
+  }
+
+  @media (min-width: 992px) and (max-width: 1199px) {
+    max-width: 970px;
+  }
 }
 
+
 .active {
-
-  h4 {
-    font-weight: 500;
-    color: var(--black);
-  }
-
-  span {
-    svg {
-      fill: var(--black);
-    }
-  }
+  font-weight: 600 !important;
+  color: #FCD318 !important;
 }
 
 button {
@@ -76,6 +91,34 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  outline: none;
+  border: none;
+}
+
+.btn {
+
+  &_orange {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #1E1E1E;
+    padding: 14px 32px;
+    background: #FCD318;
+    border-radius: 12px;
+  }
+
+  &_bordered {
+    @include flex-center(center);
+    gap: 10px;
+    padding: 14px 42px;
+    border: 1px solid #17365E;
+    border-radius: 12px;
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #17365E;
+  }
 }
 
 
@@ -88,170 +131,107 @@ button {
   color: var(--black);
 }
 
-
-.btn {
-  font-family: 'TT Firs Neue';
-  font-style: normal;
+.badge {
   font-weight: 500;
-  font-size: 12px;
-  line-height: 20px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  padding: 10px 20px;
+  color: #2D2C2E;
+  border-radius: 30px;
+  background-color: #fff;
+  max-width: max-content;
 
-
-  &__white {
-    @include flex(center, center);
-    color: var(--black);
-    background-color: transparent;
-    padding: 10px 16px;
-    border: 1px solid #EEEEEE;
-    border-radius: 4px;
-  }
-
-  &__black {
-    color: var(--white);
-    border-radius: 4px;
-    background-color: var(--black);
-    padding: 6px 30px;
-    border: 1px solid transparent;
-  }
-
-  &__to-home {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    background: #000000;
-    border-radius: 8px;
-    padding: 12px 36px;
-    color: var(--white);
-    text-transform: capitalize;
+  &_active {
+    background: #FCD318;
   }
 }
 
-.not_header {
-  inset: 0 16px auto 16px !important;
-  padding-bottom: 12px;
-  padding-top: 20px;
-  background-color: var(--white);
-}
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 8px;
-}
+// =------------- SWIPER ----------=
+.swiper_container {
 
-.grid-3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
-
-.mySwiper {
-  margin-top: 12px;
-  border: 1px solid #6792F4;
-  border-radius: 10px;
-  padding-block: 24px;
-  position: relative;
 }
 
 .swiper {
-  width: 100%;
-  height: 100%;
+
+  &-wrapper {
+
+  }
+
+  &-button-prev {
+
+  }
+
+  &-button-next {
+
+  }
+
+  &-pagination {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+  }
 }
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
 
-  /* Center slide text vertically */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+.gallerySwiper {
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  .swiper {
+
+    &-wrapper {
+
+    }
+
+    &-button-prev {
+
+    }
+
+    &-button-next {
+      img {
+        width: 520px !important;
+        height: 400px !important;
+      }
+    }
+
+    &-pagination {
+
+    }
+  }
 }
 
 .swiper-pagination {
-  position: absolute;
-  bottom: -24px !important;
-  z-index: 12334;
-}
-
-.fixed_margin {
-  height: 128px;
-}
-
-.fixed_height-60 {
-  height: 64px;
-}
-
-.fixed_height-40 {
-  height: 40px;
-}
-
-.mt-16 {
-  margin-top: 16px;
-}
-
-
-.header_drop_down {
-  @include flex-center(space-between);
-  cursor: pointer;
-
-  &:hover {
-    .svg {
-      stroke: #4C5EFE;
-    }
+  @include flex-center(center);
+  gap: 6px;
+  &-bullet {
+    @include rectangle(8);
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #000;
+    opacity: 1;
+    background: #BBBBBB;
   }
 
-  b {
-    @include flex-center(center);
-    transition: all ease 0.3s;
-    margin-left: 4px;
-
-    .svg {
-      stroke: #2A2941;
-    }
+  &-bullet-active {
+    color: #fff;
+    background: #17365E;
+    @include rectangle(10);
   }
-
-  &.active {
-    b {
-
-      transform: rotate(180deg);
-      transition: all ease 0.3s;
-    }
-
-
-    .svg {
-      transition: all ease 0.3s;
-      stroke: #4C5EFE;
-    }
-  }
-
 }
 
-.developed {
-  position: fixed;
-  inset: auto 16px 110px 16px;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 24px;
-  text-align: center;
+.swiper-btn {
+  @include flex-center(center);
 
-  span {
-    font-weight: bold;
+  &-prev {
+    cursor: pointer;
+    max-width: max-content;
+  }
+
+  &-next {
+    cursor: pointer;
+    max-width: max-content;
   }
 }

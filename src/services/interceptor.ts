@@ -1,6 +1,6 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
 
-const API: string = 'http://178.128.116.142:1777/api'
+export const API: string = 'https://api.solar.exadot.io/api/v1'
 
 const instance: AxiosInstance = axios.create({
     baseURL: API,
